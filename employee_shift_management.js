@@ -29,3 +29,14 @@ let assignShift = (employeename, eday, ehours) => {
         console.log("shift assigned for $(employeename}: ${day}, ${hours}.");
     }
 };
+
+//Task 4: Create a Function to Calculate Total Hours Worked
+
+let calculateTotalHours = (employeename) => {
+    let employee = employees.find(employee => employee.name === employeename);
+    let totalhours = employee.shifts.reduce((sum, shift)=> sum +shift.hours, 0);
+    return totalhours;
+};
+
+
+//Task 5: 
